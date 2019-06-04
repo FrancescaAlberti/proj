@@ -1,0 +1,12 @@
+@mixin margin($direction, $value) {
+    $direction-list:'top','left','right', 'bottom';
+
+ @each $i in  $direction-list{
+    @if ($direction == $i) {
+    &.m-#{$direction}-#{$value} {
+      margin-#{$direction}: $value + px;
+    }
+  }
+}
+
+}
