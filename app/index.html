@@ -4,6 +4,7 @@
 <head>
 
     <link href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/libs/bootstrap-multiselect/css/bootstrap-multiselect.css" rel="stylesheet">
     <link href="assets/styles/css/main.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -17,7 +18,7 @@
                 <div class="row clearfix">
                     <div class="col-md-12">
                         <!-- carousel -->
-                        <div id="sliderId" class="slider carousel slide m-top-100">
+                        <div id="sliderId" class="slider carousel slide m-b-10">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <p>1</p>
@@ -46,21 +47,130 @@
                     <div class="col-md-6">
                         <!-- tabs -->
                         <div class="leftTabs">
-                            <p>tabs</p>
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="1-tab" data-toggle="tab" href="#a" role="tab">a</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="2-tab" data-toggle="tab" href="#b" role="tab">b</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="3-tab" data-toggle="tab" href="#c" role="tab">c</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="a" role="tabpanel">1</div>
+                                <div class="tab-pane" id="b" role="tabpanel">2</div>
+                                <div class="tab-pane" id="c" role="tabpanel">3</div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="col-md-6">
                         <!-- accordion -->
                         <div class="rightAccordion">
-                            <p>accordion</p>
+
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne" data-toggle="collapse"
+                                        data-target="#collapseOne">
+                                        <a>
+                                            <h4 class="inline"> Item #1 </h4>
+                                            <i class="fa fa-chevron-down fa-2x ml-4 float-right"></i>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                                <div class="card ">
+                                    <div class="card-header" id="headingTwo" data-toggle="collapse"
+                                        data-target="#collapseTwo">
+
+                                        <a>
+                                            <h4 class="inline"> Item #2 </h4>
+                                            <i class="fa fa-chevron-down fa-2x ml-4 float-right"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree" data-toggle="collapse"
+                                        data-target="#collapseThree">
+
+                                        <a>
+                                            <h4 class="inline"> Item #3 </h4>
+                                            <i class="fa fa-chevron-down fa-2x ml-4 float-right"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="container-text-accordion">
+                                    <div id="collapseOne" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            1
+                                        </div>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            2
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            3
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
                 <div class="row clearfix">
                     <div class="col-md-12">
                         <!-- footer -->
-                        <div class="footerForm">
-                            <p>footer</p>
+                        <div class="footerForm m-t-50">
+                            <div class="row clearfix">
+                                <div class="col-md-6">
+                                    <div class="center dropdownRP">
+                                        <select id="dropdownRegion">
+                                            <option value="">Seleziona regione</option>
+                                            <option value="cheese">Cheese</option>
+                                            <option value="tomatoes">Tomatoes</option>
+                                            <option value="mozarella">Mozzarella</option>
+                                            <option value="mushrooms">Mushrooms</option>
+                                            <option value="pepperoni">Pepperoni</option>
+                                            <option value="onions">Onions</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="center dropdownRP">
+                                        <select id="dropdownProvince">
+                                            <option value="">Seleziona provincia</option>
+                                            <option value="cheese">Cheese</option>
+                                            <option value="tomatoes">Tomatoes</option>
+                                            <option value="mozarella">Mozzarella</option>
+                                            <option value="mushrooms">Mushrooms</option>
+                                            <option value="pepperoni">Pepperoni</option>
+                                            <option value="onions">Onions</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-12">
+                                    <div class="center m-t-50">
+                                        <div class="footerButton">
+                                            <a class="btn btn-primary disabled">bottone</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -70,9 +180,9 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $('.carousel').carousel({ interval: 2000 });
-    </script>
+    <script src="assets/libs/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

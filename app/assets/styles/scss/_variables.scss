@@ -1,15 +1,34 @@
-$base-color: black;
-$black: black;
+/* colors */
+$colors: (
+  black: #000000,
+  red: #ff0000,
+  white: #ffffff,
+  light-blue: #a2ebf9,
+  grey: #ccc,
+  light-grey: #F0F0F0,
+  dark-grey: #333,
+  
+) !default;
+
+$base-color: map-get( $colors, black );
+$black: map-get( $colors, black );
 
 /* carousel */
-$carousel-transition:all .3s ease;
+$carousel-transition: all 0.3s ease;
 $enable-transitions: true;
 $enable-prefers-reduced-motion-media-query: false;
 $carousel-control-icon-width: 50px;
 $carousel-control-width: 200px;
 $carousel-control-icon-height: 40px;
-$carousel-control-color: black;
-$carousel-control-opacity:1;
-$carousel-control-hover-opacity:0.8;
-$carousel-control-transition: all .3s ease;
+$carousel-control-color:map-get( $colors, black );
+$carousel-control-opacity: 1;
+$carousel-control-hover-opacity: 0.8;
+$carousel-control-transition: all 0.3s ease;
 $enable-gradients: false;
+
+/* tabs */
+$nav-tabs-border-color: map-get( $colors, light-blue );
+$nav-tabs-border-width: 1px;
+$nav-tabs-border-radius: 10px;
+$nav-tabs-link-active-bg: map-get( $colors, light-blue );
+$nav-tabs-link-active-border-color: map-get( $colors, light-blue);

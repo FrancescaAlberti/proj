@@ -1,0 +1,85 @@
+{
+	"regioni": 
+	[
+		{
+			"region": "Abruzzo",
+			"province": ["Chieti", "L'Aquila", "Pescara", "Teramo"]
+		},
+		{
+			"region": "Basilicata",
+			"province": ["Matera", "Potenza"]
+		},
+		{
+			"region": "Calabria",
+			"province": ["Catanzaro", "Cosenza", "Crotone", "Reggio Calabria", "Vibo Valentia"]
+		},
+		{
+			"region": "Campania",
+			"province": ["Avellino", "Benevento", "Caserta", "Napoli", "Salerno"]
+		},
+		{
+			"region": "Emilia-Romagna",
+			"province": ["Bologna", "Ferrara", "Forlì-Cesena", "Modena", "Parma", "Piacenza", "Ravenna", "Reggio Emilia", "Rimini"]
+		},
+		{
+			"region": "Friuli-Venezia Giulia",
+			"province": ["Gorizia", "Pordenone", "Trieste", "Udine"]
+		},
+		{
+			"region": "Lazio",
+			"province": ["Frosinone", "Latina", "Rieti", "Roma", "Viterbo"]
+		},
+		{
+			"region": "Liguria",
+			"province": ["Genova", "Imperia", "La Spezia", "Savona"]
+		},	
+		{
+			"region": "Lombardia",
+			"province": ["Bergamo", "Brescia", "Como", "Cremona", "Lecco", "Lodi", "Mantova", "Milano", "Monza e Brianza", "Pavia", "Sondrio", "Varese"]
+		},
+		{
+			"region": "Marche",
+			"province": ["Ancona", "Ascoli Piceno", "Fermo", "Macerata", "Pesaro e Urbino"]
+		},
+		{
+			"region": "Molise",
+			"province": ["Campobasso", "Isernia"]
+		},
+		{
+			"region": "Piemonte",
+			"province": ["Alessandria", "Asti", "Biella", "Cuneo", "Novara", "Torino", "Verbano Cusio Ossola", "Vercelli"]
+		},
+		{
+			"region": "Puglia",
+			"province": ["Bari", "Barletta-Andria-Trani", "Brindisi", "Lecce", "Foggia", "Taranto"]
+		},
+		{
+			"region": "Sardegna",
+			"province": ["Cagliari", "Carbonia-Iglesias", "Medio Campidano", "Nuoro", "Ogliastra", "Olbia-Tempio", "Oristano", "Sassari"]
+		},
+		{
+			"region": "Sicilia",
+			"province": ["Agrigento", "Caltanissetta", "Catania", "Enna", "Messina", "Palermo", "Ragusa", "Siracusa", "Trapani"]
+		},
+		{
+			"region": "Toscana",
+			"province": ["Arezzo", "Firenze", "Grosseto", "Livorno", "Lucca", "Massa e Carrara", "Pisa", "Pistoia", "Prato", "Siena"]
+		},
+		{
+			"region": "Trentino-Alto Adige",
+			"province": ["Bolzano", "Trento"]
+		},
+		{
+			"region": "Umbria",
+			"province": ["Perugia", "Terni"]
+		},
+		{
+			"region": "Valle d'Aosta",
+			"province": ["Aosta"]
+		},
+		{
+			"region": "Veneto",
+			"province": ["Belluno", "Padova", "Rovigo", "Treviso", "Venezia", "Verona", "Vicenza"]
+		}
+	]
+}

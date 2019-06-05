@@ -1,5 +1,7 @@
 /* variables */
+/* colors */
 /* carousel */
+/* tabs */
 /* mixins */
 /* bootstrap */
 .carousel {
@@ -72,7 +74,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   width: 200px;
-  color: black;
+  color: #000000;
   text-align: center;
   opacity: 1;
   -webkit-transition: all 0.3s ease;
@@ -81,7 +83,7 @@
   .carousel-control-prev:hover, .carousel-control-prev:focus,
   .carousel-control-next:hover,
   .carousel-control-next:focus {
-    color: black;
+    color: #000000;
     text-decoration: none;
     outline: 0;
     opacity: 0.8; }
@@ -103,18 +105,69 @@
   height: 40px;
   background: no-repeat 50% / 100% 100%; }
 
+/* tabs */
+.nav-tabs {
+  border-bottom: 1px solid #a2ebf9; }
+  .nav-tabs .nav-item {
+    margin-bottom: -1px; }
+  .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    /* @include border-top-radius($nav-tabs-border-radius); */ }
+    .nav-tabs .nav-link.disabled {
+      /* color: $nav-link-disabled-color; */
+      background-color: transparent;
+      border-color: transparent; }
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    /* color: $nav-tabs-link-active-color; */
+    background-color: #a2ebf9;
+    border-color: #a2ebf9; }
+
 /* custom style */
 p {
   color: red; }
 
 .extContainer {
   max-width: 1280px;
-  color: black;
+  color: #000000;
   border: 1px solid black;
   margin: auto; }
 
 .slider {
   height: 500px;
   border: 1px solid magenta; }
-  .slider.m-top-100 {
-    margin-top: 100px; }
+  .slider.m-b-10 {
+    margin-bottom: 10px; }
+
+.container-text-accordion {
+  border: 1px solid #000000; }
+
+.inline {
+  display: inline; }
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .center.m-t-50 {
+    margin-top: 50px; }
+
+.footerForm {
+  height: 400px;
+  padding: 30px;
+  background-color: #F0F0F0; }
+  .footerForm.m-t-50 {
+    margin-top: 50px; }
+
+.footerButton {
+  display: inline-block; }
+  .footerButton a.disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #333; }
