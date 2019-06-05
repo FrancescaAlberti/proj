@@ -18,34 +18,66 @@ $(document).ready(function () {
 
     });
 
-    $('#dropdownProvince').multiselect();
-    $('#dropdownRegion').multiselect();
-    
 
-    $('.footerButton').tooltip({
-        title:'Seleziona una regione e una provincia'
+
+
+    $('#dropdownRegion').multiselect(
+        {
+            onInitialized: function () {
+                let flickerAPI = "https://my-json-server.typicode.com/FrancescaAlberti/proj/regioni";
+                $.getJSON(flickerAPI, {
+                    format: "json"
+                })
+                    .done(function (data) {
+                        $('#dropdownRegion').multiselect('destroy');
+                        $.each(data, function (i) {
+                            $('#dropdownRegion').append('<option value="' + ( i + 1 ) + '">' + data[i].region + '</option>');
+                        });
+                        $('#dropdownRegion').multiselect();
+                    });
+
+
+            }
+        }
+    );
+
+    $('#dropdownRegion').change(function () {
+        let selectedRegion = $('#dropdownRegion').val(),
+            flickerAPI = "https://my-json-server.typicode.com/FrancescaAlberti/proj/regioni";
+
+        $.getJSON(flickerAPI, {
+            format: "json"
+        })
+            .done(function (data) {
+                $('#dropdownRegion').multiselect('destroy');
+
+            
+            });
     });
 
-    $('.dropdownRP').change(function () {
+    $('#dropdownProvince').multiselect();
 
+    $('.footerButton').tooltip({
+        title: 'Seleziona una regione e una provincia'
+    });
+    
+    $('.dropdownRP').change(function () {
+    
         let bothDDSelected = $('#dropdownRegion').val() && $('#dropdownProvince').val(),
             buttonDisabled = $('.footerButton a').hasClass('disabled');
-
-
+    
+    
         if (bothDDSelected) {
             if (buttonDisabled)
                 $('.footerButton a').removeClass('disabled');
-                $('.footerButton').tooltip('disable');
-
+            $('.footerButton').tooltip('disable');
+    
         } else {
             if (!buttonDisabled)
                 $('.footerButton a').addClass('disabled');
-                $('.footerButton').tooltip('enable');
+            $('.footerButton').tooltip('enable');
         }
-
-    }
-
-    );
-
+    
+    });
 
 });
