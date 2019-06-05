@@ -25,14 +25,27 @@ $(document).ready(function () {
         {
             onInitialized: function () {
                 let flickerAPI = "https://my-json-server.typicode.com/FrancescaAlberti/proj/regioni";
+
+                localStorage.setItem( 'provinces', '' );
                 $.getJSON(flickerAPI, {
                     format: "json"
                 })
                     .done(function (data) {
                         $('#dropdownRegion').multiselect('destroy');
+                        let provincesArr = [];
                         $.each(data, function (i) {
-                            $('#dropdownRegion').append('<option value="' + ( i + 1 ) + '">' + data[i].region + '</option>');
+                            
+                            $('#dropdownRegion').append('<option value="' + (i + 1) + '">' + data[i].region + '</option>');
+
+                            let provinces = {};
+                            provinces[ i + 1 ] = data[ i ].province;
+
+                            provincesArr.push( provinces );
+                            
                         });
+
+                        localStorage.setItem( 'provinces', JSON.stringify( provincesArr ) );
+
                         $('#dropdownRegion').multiselect();
                     });
 
@@ -42,6 +55,15 @@ $(document).ready(function () {
     );
 
     $('#dropdownRegion').change(function () {
+        console.log('changed region');
+        let selectedRegion = $('#dropdownRegion').val(),
+            provinces = JSON.parse(localStorage.getItem(selectedRegion));
+
+    });
+
+
+
+    /*     $('#dropdownRegion').change(function () {
         let selectedRegion = $('#dropdownRegion').val(),
             flickerAPI = "https://my-json-server.typicode.com/FrancescaAlberti/proj/regioni";
 
@@ -49,35 +71,33 @@ $(document).ready(function () {
             format: "json"
         })
             .done(function (data) {
-                $('#dropdownRegion').multiselect('destroy');
 
             
             });
-    });
+    }); */
 
-    $('#dropdownProvince').multiselect();
-
+    /*     $('#dropdownProvince').multiselect(); */
     $('.footerButton').tooltip({
         title: 'Seleziona una regione e una provincia'
     });
-    
+
     $('.dropdownRP').change(function () {
-    
+
         let bothDDSelected = $('#dropdownRegion').val() && $('#dropdownProvince').val(),
             buttonDisabled = $('.footerButton a').hasClass('disabled');
-    
-    
+
+
         if (bothDDSelected) {
             if (buttonDisabled)
                 $('.footerButton a').removeClass('disabled');
             $('.footerButton').tooltip('disable');
-    
+
         } else {
             if (!buttonDisabled)
                 $('.footerButton a').addClass('disabled');
             $('.footerButton').tooltip('enable');
         }
-    
+
     });
 
 });
