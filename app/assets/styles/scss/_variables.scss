@@ -27,8 +27,8 @@ $carousel-control-transition: all 0.3s ease;
 $enable-gradients: false;
 
 /* tabs */
-$nav-tabs-border-color: map-get( $colors, light-blue );
+$nav-tabs-border-color: map-get( $colors, light-grey );
 $nav-tabs-border-width: 1px;
 $nav-tabs-border-radius: 10px;
-$nav-tabs-link-active-bg: map-get( $colors, light-blue );
-$nav-tabs-link-active-border-color: map-get( $colors, light-blue);
+$nav-tabs-link-active-bg: map-get( $colors, light-grey );
+$nav-tabs-link-active-border-color: map-get( $colors, light-grey);

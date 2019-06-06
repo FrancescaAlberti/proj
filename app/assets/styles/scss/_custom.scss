@@ -5,13 +5,13 @@ p {
 .extContainer {
   max-width: 1280px;
   color: $base-color;
-  border: 1px solid black;
+  border: 1px solid map-get($colors, dark-grey);
   margin: auto;
 }
 
 .slider {
   height: 500px;
-  border: 1px solid magenta;
+  border: 1px solid map-get($colors, dark-grey);
   @include margin(bottom, 10);
 }
 
@@ -38,12 +38,25 @@ p {
 }
 
 .footerButton {
-    display: inline-block;
-    a.disabled {
+  display: inline-block;
+  a.disabled {
     background-color: map-get($colors, grey);
     border-color: map-get($colors, grey);
     color: map-get($colors, dark-grey);
   }
 }
-.dropdownRP {
+
+.multiselect-container li {
+  background-color: map-get($colors, light-grey);
+  
+  line-height: 1em;
+  a {
+
+    label {
+      padding: 5px;
+      [type="radio"]{
+        display: none;
+      }
+    }
+  }
 }

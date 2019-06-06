@@ -107,7 +107,7 @@
 
 /* tabs */
 .nav-tabs {
-  border-bottom: 1px solid #a2ebf9; }
+  border-bottom: 1px solid #F0F0F0; }
   .nav-tabs .nav-item {
     margin-bottom: -1px; }
   .nav-tabs .nav-link {
@@ -120,8 +120,8 @@
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
     /* color: $nav-tabs-link-active-color; */
-    background-color: #a2ebf9;
-    border-color: #a2ebf9; }
+    background-color: #F0F0F0;
+    border-color: #F0F0F0; }
 
 /* custom style */
 p {
@@ -130,12 +130,12 @@ p {
 .extContainer {
   max-width: 1280px;
   color: #000000;
-  border: 1px solid black;
+  border: 1px solid #333;
   margin: auto; }
 
 .slider {
   height: 500px;
-  border: 1px solid magenta; }
+  border: 1px solid #333; }
   .slider.m-b-10 {
     margin-bottom: 10px; }
 
@@ -171,3 +171,11 @@ p {
     background-color: #ccc;
     border-color: #ccc;
     color: #333; }
+
+.multiselect-container li {
+  background-color: #F0F0F0;
+  line-height: 1em; }
+  .multiselect-container li a label {
+    padding: 5px; }
+    .multiselect-container li a label [type="radio"] {
+      display: none; }
